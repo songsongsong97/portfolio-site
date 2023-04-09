@@ -1,12 +1,6 @@
 import ProjectItem from "./ProjectItem";
-import { useContext } from "react";
-import ThemeContext from "@/store/ThemeContext";
 
 export default function Project() {
-  const themeContext: {
-    colorPalette?: string;
-  } = useContext(ThemeContext);
-  const { colorPalette } = themeContext;
   const items: Record<string, any>[] = [
     {
       title: "Rendezvous Planner",
@@ -38,7 +32,7 @@ export default function Project() {
     <div id="project" className="mx-auto w-[80%] mb-12">
       <div className="flex flex-col">
         <h1
-          className={`text-6xl mx-12 mb-2 dark:text-${colorPalette} text-dark${colorPalette} self-end`}
+          className="mx-4 mb-2 text-4xl lg:text-6xl self-end"
         >{`<Project/>`}</h1>
         <div className="flex flex-wrap lg:flex-row justify-between content-center gap-4 items-center lg:items-start m-4">
           {items.map((item, id) => (

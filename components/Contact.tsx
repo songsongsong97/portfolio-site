@@ -1,19 +1,13 @@
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
-import { useContext } from "react";
-import ThemeContext from "@/store/ThemeContext";
 
 export default function Contact() {
-  const themeContext: {
-    colorPalette?: string;
-  } = useContext(ThemeContext);
-  const { colorPalette } = themeContext;
   return (
     <div id="contact" className="m-auto w-[80%] xl:w-1/2 mb-12">
       <div className="flex flex-col items-center justify-center gap-4 mb-4">
         <h1
-          className={`text-6xl mb-2 dark:text-${colorPalette} text-dark${colorPalette}`}
+          className="mb-2 text-4xl lg:text-6xl m-auto"
         >{`<Contact/>`}</h1>
-        <p className="font-sans text-xl mt-2 mb-4 text-left">
+        <p className="font-sans text-xl mt-2 mb-4 text-left text-black dark:text-white">
           Feel free to reach out to me at{" "}
           <span className="underline">
             <a href="mailto:songleeyee97@gmail.com">songleeyee97@gmail.com</a>
@@ -35,7 +29,7 @@ export default function Contact() {
           </span>{" "}
           .
         </p>
-        <div className="flex flex-row gap-8 justify-center items-center m-4">
+        <div className="flex flex-row gap-8 justify-center items-center m-4 text-black dark:text-white">
           <a
             className="font-sans"
             href="https://www.linkedin.com/in/song-lee-yee-7205b0139/"

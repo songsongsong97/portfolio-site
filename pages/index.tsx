@@ -12,10 +12,17 @@ export default function Home() {
     colorPalette?: string;
   } = useContext(ThemeContext);
   const { colorPalette } = themeContext;
-
+  let colorStyle = "";
+  if (colorPalette === "beige") {
+    colorStyle = "bg-beige text-darkbeige dark:text-beige";
+  } else if (colorPalette === "peach") {
+    colorStyle = "bg-peach text-darkpeach dark:text-peach";
+  } else {
+    colorStyle = "bg-matcha text-darkmatcha dark:text-matcha";
+  }
   return (
     <div
-      className={`flex flex-col min-h-screen items-stretch dark:text-white dark:bg-black bg-${colorPalette} text-black`}
+      className={`flex flex-col min-h-screen items-stretch dark:bg-black ${colorStyle}`}
     >
       <Header />
       <Intro />

@@ -15,7 +15,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="flex flex-col w-full lg:w-[30%] shadow-xl border-transparent rounded-md justify-center items-center bg-opacity-30 bg-white mb-4 cursor-pointer hover:opacity-80">
+    <div className="flex flex-col w-full lg:w-[30%] shadow-xl border-transparent rounded-md justify-center items-center bg-opacity-30 bg-white mb-4 cursor-pointer hover:opacity-80 text-black dark:text-white">
       <a href={link} target="_blank">
         <div className="p-4">
           <Image

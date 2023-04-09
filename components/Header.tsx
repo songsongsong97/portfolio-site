@@ -57,7 +57,7 @@ export default function Header() {
     </div>
   );
   return (
-    <header className="dark:border-b  dark:border-gray-900 sticky top-0 z-10 backdrop-filter backdrop-blur-lg dark:backdrop-blur-lg dark:bg-opacity-30 bg-opacity-30 p-4">
+    <header className="text-black dark:text-white border-transparent sticky top-0 z-10 backdrop-filter backdrop-blur-lg dark:backdrop-blur-lg dark:bg-opacity-30 bg-opacity-30 p-4">
       <nav className="text-xl lg:flex flex-row items-center">
         <div className="hidden lg:flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
