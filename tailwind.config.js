@@ -15,12 +15,12 @@ module.exports = {
       },
       colors:{
         peach:"#DEB6AB",
-        matcha:"#698269",
+        matcha:"#C8DBBE",
         beige:"#F8ECD1",
         darkbeige:"#A9907E",
         darkpeach:"#A7727D",
-        darkmatcha:"#40513B",
-        default:"#698269"
+        darkmatcha:"#698269",
+        default:"#F8ECD1"
       }
     },
   },

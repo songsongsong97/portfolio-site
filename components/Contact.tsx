@@ -2,11 +2,9 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 
 export default function Contact() {
   return (
-    <div id="contact" className="m-auto w-[80%] xl:w-1/2 mb-12">
+    <div id="contact" className="m-auto w-[80%] mb-12">
       <div className="flex flex-col items-center justify-center gap-4 mb-4">
-        <h1
-          className="mb-2 text-4xl lg:text-6xl m-auto"
-        >{`<Contact/>`}</h1>
+        <h1 className="mb-2 text-4xl lg:text-6xl m-auto">{`<Contact/>`}</h1>
         <p className="font-sans text-xl mt-2 mb-4 text-left text-black dark:text-white">
           Feel free to reach out to me at{" "}
           <span className="underline">

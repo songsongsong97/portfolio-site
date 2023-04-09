@@ -29,6 +29,9 @@ export default function Header() {
       <AnchorLink className="hover:underline" href="#about">
         About
       </AnchorLink>
+      <AnchorLink className="hover:underline" href="#experience">
+        Experience
+      </AnchorLink>
       <AnchorLink className="hover:underline" href="#project">
         Project
       </AnchorLink>
@@ -62,13 +65,15 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
+            <div className="border border-transparent rounded-full p-0.5 bg-white">
             <Image
-              width="100"
-              height="100"
+              width="150"
+              height="150"
               className="h-8 w-auto"
-              src="images/logo.svg"
+              src="/images/logo.png"
               alt=""
             />
+            </div>
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-auto justify-end gap-8">

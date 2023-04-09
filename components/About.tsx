@@ -5,9 +5,7 @@ export default function About() {
     <div id="about" className="m-auto w-[80%] mb-12">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-4">
         <div className="flex flex-col items-start w-full lg:w-1/2">
-          <h1
-            className="mb-2 text-4xl lg:text-6xl"
-          >{`<About/>`}</h1>
+          <h1 className="mb-2 text-4xl lg:text-6xl">{`<About/>`}</h1>
           <p className="font-sans text-xl mt-2 mb-4 text-black dark:text-white">
             {`Hello, I'm Song Lee Yee (韩丽仪), a software engineer based in
             Singapore. I have a passion for technology and a constant desire to

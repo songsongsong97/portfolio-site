@@ -21,19 +21,16 @@ export default function Project() {
     {
       title: "Fish Monitoring Systems",
       description:
-        "This is a system to monitor unusual fish behavior using Python YOLO object detection model",
+        "This is a system to monitor unusual fish behavior using Python YOLO object detection model.",
       link: "https://github.com/songsongsong97/Fish-Monitoring-Systems",
       techstack: ["Python", "NodeJS", "ReactJS", "HTML", "CSS"],
       imageUrl: "fish.png",
-
     },
   ];
   return (
     <div id="project" className="mx-auto w-[80%] mb-12">
       <div className="flex flex-col">
-        <h1
-          className="mx-4 mb-2 text-4xl lg:text-6xl self-end"
-        >{`<Project/>`}</h1>
+        <h1 className="mx-4 mb-2 text-4xl lg:text-6xl self-end">{`<Project/>`}</h1>
         <div className="flex flex-wrap lg:flex-row justify-between content-center gap-4 items-center lg:items-start m-4">
           {items.map((item, id) => (
             <ProjectItem

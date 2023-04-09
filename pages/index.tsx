@@ -6,12 +6,14 @@ import Intro from "@/components/Intro";
 import Project from "@/components/Project";
 import { useContext } from "react";
 import ThemeContext from "@/store/ThemeContext";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   const themeContext: {
     colorPalette?: string;
   } = useContext(ThemeContext);
   const { colorPalette } = themeContext;
+
   let colorStyle = "";
   if (colorPalette === "beige") {
     colorStyle = "bg-beige text-darkbeige dark:text-beige";
@@ -20,6 +22,7 @@ export default function Home() {
   } else {
     colorStyle = "bg-matcha text-darkmatcha dark:text-matcha";
   }
+
   return (
     <div
       className={`flex flex-col min-h-screen items-stretch dark:bg-black ${colorStyle}`}
@@ -27,6 +30,7 @@ export default function Home() {
       <Header />
       <Intro />
       <About />
+      <Experience />
       <Project />
       <Contact />
       <Footer />
