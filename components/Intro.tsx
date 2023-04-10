@@ -19,7 +19,7 @@ export default function Intro() {
               options={{
                 strings: [
                   "Hi! I am Lee Yee",
-                  "A Software Engineer",
+                  "A Developer",
                   "A Food Lover",
                   "A Traveller",
                 ],
