@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface ProjectItemProps {
   title: string;
@@ -15,7 +16,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="flex flex-col w-full lg:w-[30%] shadow-xl border-transparent rounded-md justify-center items-center bg-opacity-30 bg-white mb-4 cursor-pointer hover:opacity-80 text-black dark:text-white">
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      onHoverStart={(e) => {}}
+      onHoverEnd={(e) => {}}
+      className="flex flex-col w-full lg:w-[30%] shadow-xl border-transparent rounded-md justify-center items-center bg-opacity-30 bg-white mb-4 cursor-pointer hover:opacity-80 text-black dark:text-white"
+    >
       <a href={link} target="_blank">
         <div className="p-4">
           <Image
@@ -41,7 +47,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           ))}
         </div>
       </a>
-    </div>
+    </motion.div>
   );
 };
 export default ProjectItem;

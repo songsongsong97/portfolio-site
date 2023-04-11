@@ -1,11 +1,24 @@
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { container, item } from "../animations/animation";
 
 export default function Contact() {
   return (
     <div id="contact" className="m-auto w-[80%] mb-12">
-      <div className="flex flex-col items-center justify-center gap-4 mb-4">
-        <h1 className="mb-2 text-4xl lg:text-6xl m-auto">{`<Contact/>`}</h1>
-        <p className="font-sans text-xl mt-2 mb-4 text-left text-black dark:text-white">
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="flex flex-col items-center justify-center gap-4 mb-4"
+      >
+        <motion.li
+          variants={item}
+          className="mb-2 text-4xl lg:text-6xl m-auto"
+        >{`<Contact/>`}</motion.li>
+        <motion.li
+          variants={item}
+          className="font-sans text-xl mt-2 mb-4 text-left text-black dark:text-white"
+        >
           Feel free to reach out to me at{" "}
           <span className="underline">
             <a href="mailto:songleeyee97@gmail.com">songleeyee97@gmail.com</a>
@@ -26,27 +39,30 @@ export default function Contact() {
             </a>
           </span>{" "}
           .
-        </p>
-        <div className="flex flex-row gap-8 justify-center items-center m-4 text-black dark:text-white">
+        </motion.li>
+        <motion.li
+          variants={item}
+          className="flex flex-row gap-8 justify-center items-center m-4 text-black dark:text-white"
+        >
           <a
-            className="font-sans"
+            className="hover:opacity-80"
             href="https://www.linkedin.com/in/song-lee-yee-7205b0139/"
             target="_blank"
           >
             <AiFillLinkedin size={48} />
           </a>
           <a
-            className="font-sans"
+            className="hover:opacity-80"
             href="https://github.com/songsongsong97"
             target="_blank"
           >
             <AiFillGithub size={48} />
           </a>
-          <a className="font-sans" href="mailto:songleeyee97@gmail.com">
+          <a className="hover:opacity-80" href="mailto:songleeyee97@gmail.com">
             <AiOutlineMail size={48} />
           </a>
-        </div>
-      </div>
+        </motion.li>
+      </motion.ul>
     </div>
   );
 }

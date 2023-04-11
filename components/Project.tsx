@@ -1,4 +1,6 @@
 import ProjectItem from "./ProjectItem";
+import { motion } from "framer-motion";
+import { container, item } from "../animations/animation";
 
 export default function Project() {
   const items: Record<string, any>[] = [
@@ -29,9 +31,17 @@ export default function Project() {
   ];
   return (
     <div id="project" className="mx-auto w-[80%] mb-12">
-      <div className="flex flex-col">
-        <h1 className="mx-4 mb-2 text-4xl lg:text-6xl self-end">{`<Project/>`}</h1>
-        <div className="flex flex-wrap lg:flex-row justify-between content-center gap-4 items-center lg:items-start m-4">
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="flex flex-col"
+      >
+        <motion.li
+          variants={item}
+          className="mx-4 mb-2 text-4xl lg:text-6xl self-end"
+        >{`<Project/>`}</motion.li>
+        <motion.li variants={item} className="flex flex-wrap lg:flex-row justify-between content-center gap-4 items-center lg:items-start m-4">
           {items.map((item, id) => (
             <ProjectItem
               key={id}
@@ -42,8 +52,8 @@ export default function Project() {
               imageUrl={item.imageUrl}
             />
           ))}
-        </div>
-      </div>
+        </motion.li>
+      </motion.ul>
     </div>
   );
 }

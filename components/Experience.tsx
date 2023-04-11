@@ -1,4 +1,6 @@
 import ExperienceItem from "./ExperienceItem";
+import { motion } from "framer-motion";
+import { container, item } from "../animations/animation";
 
 export default function Experience() {
   const experiences = [
@@ -32,8 +34,13 @@ export default function Experience() {
   return (
     <div id="experience" className="m-auto w-[80%] mb-12">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 mb-4">
-        <div className="flex flex-col items-center w-full">
-          <h1 className="mb-6 text-4xl lg:text-6xl">{`<Experience/>`}</h1>
+        <motion.ul
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          className="flex flex-col items-center w-full"
+        >
+          <motion.li variants={item} className="mb-6 text-4xl lg:text-6xl">{`<Experience/>`}</motion.li>
           {experiences.map((item, id) => (
             <ExperienceItem
               key={id}
@@ -45,7 +52,7 @@ export default function Experience() {
               skills={item.skills}
             />
           ))}
-        </div>
+        </motion.ul>
       </div>
     </div>
   );
