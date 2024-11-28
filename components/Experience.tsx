@@ -41,23 +41,6 @@ export default function Experience() {
       ],
     },
     {
-      title: "Software Engineer (Python)",
-      description:
-        "Built API services and tools to provide DNS hosting and certificate manager services for over thousands of domains.",
-      company: "Merquri Pte Ltd.",
-      from: "Jul 2021",
-      until: "Present",
-      skills: [
-        "Flask",
-        "ReactJS",
-        "MySQL",
-        "Docker",
-        "Kubernetes",
-        "Gitlab CI",
-        "AWS",
-      ],
-    },
-    {
       title: "Software Engineer",
       description:
         "Built and enhanced Django and PHP application that provides hard disk drive log parsing and analyzing service to internal customers. Built the frontend dashboard using HTML, CSS and JavaScript.",
